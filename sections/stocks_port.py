@@ -245,7 +245,7 @@ st.dataframe(max_dd, column_config={k:st.column_config.NumberColumn(format='%.2f
 st.markdown('Стоимость под риском (95% VaR и ES) на один месяц')
 var_month = np.zeros((df.shape[1], 4))
 for i, col in enumerate(df_returns):
-    sim_returns = rng.choice(df_returns[col], size=(1_000_000, 21), replace=True, shuffle=True)
+    sim_returns = rng.choice(df_returns[col], size=(100_000, 21), replace=True, shuffle=True)
     sim_returns_terminal = np.prod(np.exp(sim_returns), axis=1)
     sim_returns_change = sim_returns_terminal - 1
 
