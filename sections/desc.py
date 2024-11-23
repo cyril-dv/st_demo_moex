@@ -23,4 +23,4 @@ col2.markdown('''
 ''')
 
 col2.divider()
-col2.markdown('Исходный код на [GitHub](https://github.com/cyril-dv/st-demo-moex)')
+col2.markdown('Исходный код на [GitHub](https://github.com/cyril-dv/st_demo_moex)')

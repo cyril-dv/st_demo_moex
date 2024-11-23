@@ -99,7 +99,7 @@ fig.update_layout(legend=dict(title_text=None, orientation='h', x=0, y=1.1, xanc
 col1.plotly_chart(fig)
 
 fig = px.line(df_tmp, x='Дата', y=[selected_stock, 'Индекс'], hover_data={'Дата': '|%d.%m.%Y'}, template='seaborn')
-fig.update_yaxes(title=selected_stock)
+fig.update_yaxes(title=f'{df_tmp['Дата'].min().year}=100')
 fig.update_xaxes(title=None, dtick='M6', tick0=df_tmp['Дата'].min(), tickformat='%b\n%Y')
 fig.update_layout(legend=dict(title_text=None, orientation='h', x=0, y=1.1, xanchor='left', yanchor='top'))
 col2.plotly_chart(fig)
